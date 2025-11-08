@@ -11,7 +11,7 @@ function Hero() {
       <img
         src={BG}
         alt="Background"
-        className="absolute inset-0 w-full h-full object-cover z-0"
+        className="absolute inset-0 w-full h-full object-cover z-0 "
       />
       <div className="absolute inset-0 bg-black/70 z-0"></div>
 
@@ -27,7 +27,7 @@ function Hero() {
             <span className="text-orange-600">Angcaya</span>
           </h1>
           <p className="mt-4 text-gray-300 text-lg">
-            CNSC | 3rd Year | BSIT Student
+            CNSC | 4th Year | BSIT Student
           </p>
         </div>
 

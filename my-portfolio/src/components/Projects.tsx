@@ -34,13 +34,13 @@ function Projects() {
         {projects.map((project, index) => (
           <motion.div
             key={index}
-            className="bg-gray-800 p-6 rounded-2xl shadow-lg hover:shadow-cyan-500/30 transition-all duration-300"
+            className="bg-gray-800 p-6 rounded-2xl shadow-lg hover:shadow-orange-600/30 transition-all duration-300"
             initial={{ opacity: 0, y: 40 }}
             whileInView={{ opacity: 1, y: 0 }}
             whileHover={{ scale: 1.05 }}
             transition={{ duration: 0.4, delay: index * 0.2 }}
           >
-            <h3 className="text-2xl font-semibold mb-3 text-cyan-400">
+            <h3 className="text-2xl font-semibold mb-3 text-orange-600">
               {project.title}
             </h3>
             <p className="text-gray-300">{project.description}</p>

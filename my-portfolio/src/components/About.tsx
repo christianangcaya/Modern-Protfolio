@@ -21,7 +21,7 @@ function About() {
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8, delay: 0.2 }}
       >
-        Hi! I'm <span className="text-cyan-400 font-semibold">Your Name</span>, a
+        Hi! I'm <span className="text-orange-600 font-semibold">Christian C. Angcaya</span>, a
         passionate web developer who loves building modern, responsive, and
         interactive web experiences. I focus on creating seamless user
         interfaces using React, TypeScript, and TailwindCSS.

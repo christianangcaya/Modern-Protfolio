@@ -13,8 +13,8 @@ function Navbar() {
       transition={{ duration: 0.8 }}
     >
       <div className="flex items-center gap-2">
-        <img src={Logo} alt="Logo" className="w-8 h-8" />
-        <span className="text-white font-bold text-lg">CCA</span>
+        {/* <img src={Logo} alt="Logo" className="w-8 h-8" /> */}
+        <span className="text-white font-bold text-lg">ChristianAngcaya</span>
       </div>
 
       <div className="hidden md:flex gap-8 text-white font-medium">
@@ -25,7 +25,7 @@ function Navbar() {
         <a href="#contact" className="hover:text-orange-500 transition">Contact</a>
       </div>
 
-      {/* Mobile Menu Button */}
+
       <button
         onClick={() => setIsOpen(!isOpen)}
         className="md:hidden text-white focus:outline-none text-2xl"
