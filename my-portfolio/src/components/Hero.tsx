@@ -11,7 +11,7 @@ function Hero() {
       <img
         src={BG}
         alt="Background"
-        className="absolute inset-0 w-full h-full object-cover z-0 "
+        className="absolute inset-0 w-full h-full object-cover z-0"
       />
       <div className="absolute inset-0 bg-black/70 z-0"></div>
 
@@ -22,13 +22,43 @@ function Hero() {
         className="flex flex-col md:flex-row items-center gap-8 px-6 text-center md:text-left z-10"
       >
         <div>
-          <h1 className="text-5xl md:text-7xl font-semibold">
+          <p className="text-lg text-orange-500 font-medium mb-2">
+            Hello, I'm
+          </p>
+
+          <h1 className="text-5xl md:text-7xl font-semibold leading-tight">
             <span className="text-white">Christian </span>
             <span className="text-orange-600">Angcaya</span>
           </h1>
-          <p className="mt-4 text-gray-300 text-lg">
-            CNSC | 4th Year | BSIT Student
+
+          <h2 className="mt-3 text-2xl md:text-3xl text-gray-300 font-light">
+            Full Stack Web Developer
+          </h2>
+
+          <p className="mt-4 text-gray-300 text-lg max-w-xl">
+            I build fast, responsive, and visually engaging web applications using
+            modern technologies like React, TypeScript, Node.js, and TailwindCSS.
+            Passionate about solving real-world problems and turning ideas into
+            high-quality digital experiences.
           </p>
+
+          {/* Buttons */}
+          <div className="mt-6 flex flex-col sm:flex-row items-center gap-4">
+            <a
+              href="#projects"
+              className="px-6 py-3 bg-orange-600 hover:bg-orange-700 rounded-lg text-white font-medium shadow-lg transition-all"
+            >
+              View My Projects
+            </a>
+
+            <a
+              href="/resume.pdf"
+              download
+              className="px-6 py-3 border border-orange-600 text-orange-600 hover:bg-orange-600 hover:text-white rounded-lg font-medium transition-all shadow-lg"
+            >
+              Download Resume
+            </a>
+          </div>
         </div>
 
         <motion.img

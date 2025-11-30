@@ -13,13 +13,26 @@ const projects = [
     title: "IoT Vending Machine",
     description: "Smart vending machine interface powered by React and Node.js.",
   },
+  {
+    title: "IoT Vending Machine",
+    description: "Smart vending machine interface powered by React and Node.js.",
+  },
+  {
+    title: "IoT Vending Machine",
+    description: "Smart vending machine interface powered by React and Node.js.",
+  },
+  {
+    title: "IoT Vending Machine",
+    description: "Smart vending machine interface powered by React and Node.js.",
+  }, 
+  
 ];
 
 function Projects() {
   return (
     <section
       id="projects"
-      className="min-h-screen px-6 py-20 bg-gradient-to-b from-gray-900 to-black text-center"
+      className="min-h-screen flex flex-col items-center justify-center px-6 py-20 bg-gradient-to-b from-black via-gray-900 to-black relative overflow-hidden"
     >
       <motion.h2
         className="text-4xl md:text-5xl font-bold mb-12"

@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
-import Logo from "../assets/bg1.png";
+import {Code2} from "lucide-react";
 
 function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -14,7 +14,8 @@ function Navbar() {
     >
       <div className="flex items-center gap-2">
         {/* <img src={Logo} alt="Logo" className="w-8 h-8" /> */}
-        <span className="text-white font-bold text-lg">ChristianAngcaya</span>
+        <Code2 className="w-8 h-8 text-orange-600" />
+        <span className="text-white font-bold text-lg">CCA</span>
       </div>
 
       <div className="hidden md:flex gap-8 text-white font-medium">
