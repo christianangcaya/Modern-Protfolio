@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import BG from "../assets/bg1.png";
-import Profile from "../assets/myiamge.jpg";
+// import Profile from "../assets/myiamge.jpg";
+import Profile from "../assets/Image.jpg";
 
 function Hero() {
   return (
@@ -22,9 +23,7 @@ function Hero() {
         className="flex flex-col md:flex-row items-center gap-8 px-6 text-center md:text-left z-10"
       >
         <div>
-          <p className="text-lg text-orange-500 font-medium mb-2">
-            Hello, I'm
-          </p>
+          <p className="text-lg text-orange-500 font-medium mb-2">Hello, I'm</p>
 
           <h1 className="text-5xl md:text-7xl font-semibold leading-tight">
             <span className="text-white">Christian </span>
@@ -32,14 +31,15 @@ function Hero() {
           </h1>
 
           <h2 className="mt-3 text-2xl md:text-3xl text-gray-300 font-light">
-            Full Stack Web Developer
+            Full Stack Web & IoT Developer
           </h2>
 
           <p className="mt-4 text-gray-300 text-lg max-w-xl">
-            I build fast, responsive, and visually engaging web applications using
-            modern technologies like React, TypeScript, Node.js, and TailwindCSS.
-            Passionate about solving real-world problems and turning ideas into
-            high-quality digital experiences.
+            I build fast, responsive, and visually engaging websites using
+            modern technologies like React, TypeScript, Node.js, and
+            TailwindCSS. I also develop web applications integrated with IoT
+            systems, connecting Arduino/ESP32 hardware to the web to solve
+            real-world problems.
           </p>
 
           {/* Buttons */}

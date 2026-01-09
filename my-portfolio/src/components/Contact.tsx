@@ -5,7 +5,7 @@ function Contact() {
   return (
     <section
       id="contact"
-      className="min-h-screen px-6 py-20 bg-gradient-to-b from-gray-900 to-black text-center"
+      className="min-h-screen px-6 py-20 bg-gradient-to-b  from-black via-gray-900 to-black text-center"
     >
       <motion.h2
         className="text-4xl md:text-5xl font-bold mb-8"
@@ -15,7 +15,6 @@ function Contact() {
       >
         Contact Me
       </motion.h2>
-
       <motion.p
         className="text-gray-400 mb-10 text-lg"
         initial={{ opacity: 0 }}
@@ -62,13 +61,28 @@ function Contact() {
         whileInView={{ opacity: 1 }}
         transition={{ delay: 0.5 }}
       >
-        <a href="https://github.com/" target="_blank" className="text-gray-400 hover:text-white">
+        <a
+          href="https://github.com/christianangcaya"
+          target="_blank"
+          className="text-gray-400 hover:text-white"
+        >
           <FaGithub />
         </a>
-        <a href="https://linkedin.com/" target="_blank" className="text-gray-400 hover:text-white">
+        <a
+          href="https://linkedin.com/"
+          target="_blank"
+          className="text-gray-400 hover:text-white"
+        >
           <FaLinkedin />
         </a>
-        <a href="mailto:your@email.com" className="text-gray-400 hover:text-white">
+        <a
+          href="mailto:angcayachristian2004@gmail.com"
+          className="text-gray-400 hover:text-white"
+          onClick={(e) => {
+            e.preventDefault(); 
+            window.location.href = "mailto:angcayachristian2004@gmail.com"; 
+          }}
+        >
           <FaEnvelope />
         </a>
       </motion.div>

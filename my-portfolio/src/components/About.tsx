@@ -6,23 +6,25 @@ function About() {
     {
       icon: <Code2 className="w-8 h-8" />,
       title: "Clean Code",
-      description: "Writing maintainable, scalable code following best practices"
+      description:
+        "Writing maintainable, scalable code following best practices",
     },
     {
       icon: <Palette className="w-8 h-8" />,
       title: "Modern Design",
-      description: "Creating beautiful interfaces with attention to detail"
+      description: "Creating beautiful interfaces with attention to detail",
     },
     {
       icon: <Rocket className="w-8 h-8" />,
       title: "Performance",
-      description: "Building fast, optimized applications for the best UX"
+      description: "Building fast, optimized applications for the best UX",
     },
     {
       icon: <Users className="w-8 h-8" />,
       title: "Collaboration",
-      description: "Working effectively with teams to deliver exceptional results"
-    }
+      description:
+        "Working effectively with teams to deliver exceptional results",
+    },
   ];
 
   const containerVariants = {
@@ -30,9 +32,9 @@ function About() {
     visible: {
       opacity: 1,
       transition: {
-        staggerChildren: 0.2
-      }
-    }
+        staggerChildren: 0.2,
+      },
+    },
   };
 
   const itemVariants = {
@@ -40,8 +42,8 @@ function About() {
     visible: {
       opacity: 1,
       y: 0,
-      transition: { duration: 0.5 }
-    }
+      transition: { duration: 0.5 },
+    },
   };
 
   return (
@@ -60,7 +62,7 @@ function About() {
           transition={{
             duration: 8,
             repeat: Infinity,
-            ease: "easeInOut"
+            ease: "easeInOut",
           }}
         />
         <motion.div
@@ -72,7 +74,7 @@ function About() {
           transition={{
             duration: 10,
             repeat: Infinity,
-            ease: "easeInOut"
+            ease: "easeInOut",
           }}
         />
       </div>
@@ -141,7 +143,7 @@ function About() {
               animate={{ y: [0, 10, 0] }}
               transition={{ duration: 2.5, repeat: Infinity }}
             >
-              TypeScript
+              Arduino
             </motion.div>
           </motion.div>
 
@@ -154,14 +156,31 @@ function About() {
             transition={{ duration: 0.8 }}
           >
             <p className="text-gray-300 text-lg md:text-xl leading-relaxed mb-6">
-              Hi! I'm <span className="text-orange-600 font-bold">Christian C. Angcaya</span>, a
-              passionate web developer who loves building modern, responsive, and
-              interactive web experiences.
+              Hi! I'm{" "}
+              <span className="text-orange-600 font-bold">
+                Christian C. Angcaya
+              </span>
+              , a passionate{" "}
+              <span className="font-semibold">
+                Full-Stack Web & IoT Developer
+              </span>{" "}
+              who loves building modern, responsive, and interactive web
+              experiences.
             </p>
-            <p className="text-gray-400 text-base md:text-lg leading-relaxed mb-6">
-              I specialize in creating seamless user interfaces using cutting-edge technologies
-              like React, TypeScript, and TailwindCSS. My goal is to craft digital experiences
-              that are not only visually stunning but also highly functional and user-friendly.
+            <p className="text-gray-400 text-sm md:text-base leading-relaxed mb-2">
+              I specialize in creating websites using technologies like{" "}
+              <span className="font-semibold">
+                React, TypeScript, and TailwindCSS
+              </span>
+              . I also develop{" "}
+              <span className="font-semibold">
+                web applications integrated with IoT systems
+              </span>
+              , connecting hardware like{" "}
+              <span className="font-semibold">Arduino and ESP32</span> to
+              deliver smart, real-world solutions. My goal is to craft digital
+              experiences that are visually stunning, highly functional, and
+              bridge the gap between hardware and software.
             </p>
           </motion.div>
         </div>
@@ -178,9 +197,9 @@ function About() {
             <motion.div
               key={index}
               variants={itemVariants}
-              whileHover={{ 
+              whileHover={{
                 scale: 1.05,
-                boxShadow: "0 20px 40px rgba(234, 88, 12, 0.3)"
+                boxShadow: "0 20px 40px rgba(234, 88, 12, 0.3)",
               }}
               className="bg-gradient-to-br from-gray-800 to-gray-900 p-6 rounded-xl border border-gray-800 hover:border-orange-600/50 transition-all duration-300"
             >
@@ -191,7 +210,9 @@ function About() {
               >
                 {skill.icon}
               </motion.div>
-              <h3 className="text-white font-bold text-xl mb-2">{skill.title}</h3>
+              <h3 className="text-white font-bold text-xl mb-2">
+                {skill.title}
+              </h3>
               <p className="text-gray-400 text-sm">{skill.description}</p>
             </motion.div>
           ))}

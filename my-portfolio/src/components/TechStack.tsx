@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
-import { FaReact, FaNodeJs, FaHtml5, FaCss3Alt, FaJsSquare, FaGitAlt } from "react-icons/fa";
+import { FaReact, FaNodeJs, FaHtml5, FaCss3Alt, FaJsSquare, FaGitAlt} from "react-icons/fa";
+import { SiArduino } from "react-icons/si";
 import { SiTypescript, SiTailwindcss } from "react-icons/si";
 
 const techs = [
@@ -11,6 +12,7 @@ const techs = [
   { icon: <FaCss3Alt size={50} className="text-blue-500" />, name: "CSS3" },
   { icon: <FaJsSquare size={50} className="text-yellow-400" />, name: "JavaScript" },
   { icon: <FaGitAlt size={50} className="text-red-500" />, name: "Git" },
+  { icon: <SiArduino size={50} className="text-blue-600" />, name: "Arduino" },
 ];
 
 function TechStack() {
