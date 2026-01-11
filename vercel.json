@@ -1,0 +1,10 @@
+{
+  "buildCommand": "cd my-portfolio && npm run build",
+  "outputDirectory": "my-portfolio/dist",
+  "routes": [
+    {
+      "src": "/(.*)",
+      "destination": "/index.html"
+    }
+  ]
+}
