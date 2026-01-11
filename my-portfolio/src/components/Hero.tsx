@@ -33,11 +33,11 @@ function Hero() {
           </h1>
 
           <h2 className="mt-2 sm:mt-3 text-lg sm:text-2xl md:text-3xl text-gray-300 font-light">
-            Full Stack Developer
+            Full-Stack Developer
           </h2>
 
           <p className="mt-3 sm:mt-4 text-gray-300 text-sm sm:text-base md:text-lg max-w-xl mx-auto md:mx-0 leading-relaxed">
-            IT undergraduate with hands-on experience in full-stack web
+            IT undergraduate with hands-on experience in full-stack
             development and IoT-integrated systems, seeking an internship or
             OJT. Proficient in building responsive user
             interfaces, implementing backend logic, and creating real-time
@@ -55,11 +55,11 @@ function Hero() {
             </a>
 
             <a
-              href="/CV.pdf"
+              href="/CCA CV Resume (1).pdf"
               download="Christian-Angcaya-CV.pdf"
               className="w-full sm:w-auto px-6 py-3 border border-orange-600 text-orange-600 hover:bg-orange-600 hover:text-white rounded-lg font-medium transition-all shadow-lg text-center"
             >
-              Download CV
+              Download Resume
             </a>
           </div>
         </div>
