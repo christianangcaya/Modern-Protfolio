@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import { useEffect } from "react";
+import { Link } from "react-router-dom";
 import {
   Code,
   Palette,
@@ -11,6 +12,8 @@ import {
   Upload,
   ShieldCheck,
   Download,
+  ArrowLeft,
+  ArrowRight,
 } from "lucide-react";
 import VDVD from "../assets/LGUscholar.png";
 
@@ -90,6 +93,21 @@ function LGUProject() {
 
   return (
     <div className="min-h-screen bg-gradient-to-b from-black via-gray-900 to-black">
+      {/* Back Button */}
+      <motion.div
+        className="px-6 pt-6"
+        initial={{ opacity: 0, x: -20 }}
+        animate={{ opacity: 1, x: 0 }}
+        transition={{ duration: 0.5 }}
+      >
+        <Link 
+          to="/#projects" 
+          className="inline-flex items-center gap-2 text-orange-500 hover:text-orange-400 font-semibold transition-colors"
+        >
+          <ArrowLeft className="w-5 h-5" />
+          Back to Projects
+        </Link>
+      </motion.div>
       {/* Hero Section */}
       <motion.section
         className="relative px-6 py-20 overflow-hidden"
@@ -142,7 +160,7 @@ function LGUProject() {
             </motion.div>
 
             <h1 className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-orange-500 via-orange-600 to-red-600 bg-clip-text text-transparent">
-              LGU Scholar Filling System
+              LGU Scholar Filling Management System
             </h1>
 
             <motion.div
@@ -461,13 +479,23 @@ function LGUProject() {
             ></motion.div>
           </motion.div>
 
-          <motion.button
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.95 }}
-            className="px-8 py-4 bg-gradient-to-r from-orange-600 to-red-600 text-white font-bold rounded-full hover:shadow-lg hover:shadow-orange-600/50 transition-all"
-          >
-            View Live Project
-          </motion.button>
+          {/* Navigation Buttons */}
+          <div className="flex flex-col md:flex-row gap-4 justify-center items-center mt-8">
+            <Link 
+              to="/project/sustainable-smart-agri"
+              className="px-8 py-4 bg-gradient-to-r from-orange-600 to-red-700 text-white font-bold rounded-full hover:shadow-lg hover:shadow-orange-600/50 transition-all flex items-center gap-2"
+            >
+              <ArrowLeft className="w-5 h-5" />
+              Previous Project
+            </Link>
+            <Link 
+              to="/project/vendo-dito-vendo-doon"
+              className="px-8 py-4 bg-gradient-to-r from-orange-600 to-red-700 text-white font-bold rounded-full hover:shadow-lg hover:shadow-orange-600/50 transition-all flex items-center gap-2"
+            >
+              Next Project
+              <ArrowRight className="w-5 h-5" />
+            </Link>
+          </div>
         </div>
       </section>
     </div>

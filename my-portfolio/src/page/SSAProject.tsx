@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import { useEffect } from "react";
+import { Link } from "react-router-dom";
 import {
   Code,
   Zap,
@@ -9,6 +10,8 @@ import {
   Cpu,
   Wifi,
   WrenchIcon,
+  ArrowLeft,
+  ArrowRight,
 } from "lucide-react";
 
 import SSA1 from "../assets/LoginSSA.jpg";
@@ -92,6 +95,21 @@ function SSAProject() {
 
   return (
     <div className="min-h-screen bg-gradient-to-b from-black via-gray-900 to-black">
+      {/* Back Button */}
+      <motion.div
+        className="px-6 pt-6"
+        initial={{ opacity: 0, x: -20 }}
+        animate={{ opacity: 1, x: 0 }}
+        transition={{ duration: 0.5 }}
+      >
+        <Link 
+          to="/#projects" 
+          className="inline-flex items-center gap-2 text-orange-500 hover:text-orange-400 font-semibold transition-colors"
+        >
+          <ArrowLeft className="w-5 h-5" />
+          Back to Projects
+        </Link>
+      </motion.div>
       {/* Hero Section */}
       <motion.section
         className="relative px-6 py-20 overflow-hidden"
@@ -579,13 +597,16 @@ function SSAProject() {
             ></motion.div>
           </motion.div>
 
-          <motion.button
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.95 }}
-            className="px-8 py-4 bg-gradient-to-r from-orange-600 to-red-600 text-white font-bold rounded-full hover:shadow-lg hover:shadow-orange-600/50 transition-all"
-          >
-            View Live Project
-          </motion.button>
+          {/* Navigation Buttons */}
+          <div className="flex flex-col md:flex-row gap-4 justify-center items-center mt-8">
+            <Link 
+              to="/project/lgu-scholar"
+              className="px-8 py-4 bg-gradient-to-r from-orange-600 to-red-700 text-white font-bold rounded-full hover:shadow-lg hover:shadow-orange-600/50 transition-all flex items-center gap-2"
+            >
+              Next Project
+              <ArrowRight className="w-5 h-5" />
+            </Link>
+          </div>
         </div>
       </section>
     </div>

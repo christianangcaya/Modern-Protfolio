@@ -20,43 +20,46 @@ function Hero() {
         initial={{ opacity: 0, y: 40 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 1 }}
-        className="flex flex-col md:flex-row items-center gap-8 px-6 text-center md:text-left z-10"
+        className="flex flex-col-reverse md:flex-row items-center justify-center gap-6 md:gap-8 px-4 sm:px-6 text-center md:text-left z-10 max-w-6xl mx-auto"
       >
-        <div>
-          <p className="text-lg text-orange-500 font-medium mb-2">Hello, I'm</p>
+        <div className="flex-1 min-w-0">
+          <p className="text-base sm:text-lg text-orange-500 font-medium mb-2">
+            Hello, I'm
+          </p>
 
-          <h1 className="text-5xl md:text-7xl font-semibold leading-tight">
+          <h1 className="text-3xl sm:text-5xl md:text-6xl lg:text-7xl font-semibold leading-tight">
             <span className="text-white">Christian </span>
             <span className="text-orange-600">Angcaya</span>
           </h1>
 
-          <h2 className="mt-3 text-2xl md:text-3xl text-gray-300 font-light">
+          <h2 className="mt-2 sm:mt-3 text-lg sm:text-2xl md:text-3xl text-gray-300 font-light">
             Full Stack Web & IoT Developer
           </h2>
 
-          <p className="mt-4 text-gray-300 text-lg max-w-xl">
-            I build fast, responsive, and visually engaging websites using
-            modern technologies like React, TypeScript, Node.js, and
-            TailwindCSS. I also develop web applications integrated with IoT
-            systems, connecting Arduino/ESP32 hardware to the web to solve
-            real-world problems.
+          <p className="mt-3 sm:mt-4 text-gray-300 text-sm sm:text-base md:text-lg max-w-xl mx-auto md:mx-0 leading-relaxed">
+            IT undergraduate with hands-on experience in full-stack web
+            development and IoT-integrated systems, seeking an internship or
+            OJT. Proficient in building responsive user
+            interfaces, implementing backend logic, and creating real-time
+            features. Strong problem-solving skills and passionate about
+            learning modern technologies to deliver practical solutions.
           </p>
 
           {/* Buttons */}
-          <div className="mt-6 flex flex-col sm:flex-row items-center gap-4">
+          <div className="mt-6 flex flex-col sm:flex-row items-center md:items-start justify-center md:justify-start gap-3 sm:gap-4">
             <a
               href="#projects"
-              className="px-6 py-3 bg-orange-600 hover:bg-orange-700 rounded-lg text-white font-medium shadow-lg transition-all"
+              className="w-full sm:w-auto px-6 py-3 bg-orange-600 hover:bg-orange-700 rounded-lg text-white font-medium shadow-lg transition-all text-center"
             >
               View My Projects
             </a>
 
             <a
-              href="/resume.pdf"
-              download
-              className="px-6 py-3 border border-orange-600 text-orange-600 hover:bg-orange-600 hover:text-white rounded-lg font-medium transition-all shadow-lg"
+              href="/CV.pdf"
+              download="Christian-Angcaya-CV.pdf"
+              className="w-full sm:w-auto px-6 py-3 border border-orange-600 text-orange-600 hover:bg-orange-600 hover:text-white rounded-lg font-medium transition-all shadow-lg text-center"
             >
-              Download Resume
+              Download CV
             </a>
           </div>
         </div>
@@ -64,7 +67,7 @@ function Hero() {
         <motion.img
           src={Profile}
           alt="Profile"
-          className="w-96 h-96 rounded-full object-cover border-4 border-orange-600 shadow-xl"
+          className="w-56 h-56 sm:w-72 sm:h-72 md:w-80 md:h-80 lg:w-96 lg:h-96 rounded-full object-cover border-4 border-orange-600 shadow-xl flex-shrink-0"
           whileHover={{ scale: 1.05 }}
           transition={{ duration: 0.3 }}
         />

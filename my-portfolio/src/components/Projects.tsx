@@ -9,7 +9,7 @@ const projects = [
   },
   {
     id: "lgu-scholar",
-    title: "LGU Scholar Filling System",
+    title: "LGU Scholar Filling Management System",
     description: "A full CRUD system with authentication and dashboard analytics.",
   },
   {

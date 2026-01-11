@@ -1,10 +1,10 @@
 import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
 import { 
   Github, 
   Linkedin, 
   Mail, 
   Facebook,
-  Heart,
   ArrowUp,
   Code2
 } from "lucide-react";
@@ -12,15 +12,16 @@ import {
 function Footer() {
   const socialLinks = [
     { icon: <Github className="w-5 h-5" />, href: "https://github.com/christianangcaya", label: "GitHub" },
-    { icon: <Linkedin className="w-5 h-5" />, href: "https://www.linkedin.com", label: "LinkedIn" },
+    { icon: <Linkedin className="w-5 h-5" />, href: "https://www.linkedin.com/in/christian-angcaya-4125163a4/", label: "LinkedIn" },
     { icon: <Facebook className="w-5 h-5" />, href: "https://www.facebook.com/christian.angcaya.1", label: "Facebook" },
-    { icon: <Mail className="w-5 h-5" />, href: "mailto:angcayachristian2004@gmail.com", label: "Email" }
+    { icon: <Mail className="w-5 h-5" />, href: "https://mail.google.com/mail/?view=cm&to=angcayachristian2004@gmail.com", label: "Email" }
   ];
 
   const quickLinks = [
-    { name: "About", href: "#about" },
-    { name: "Projects", href: "#projects" },
-    { name: "Contact", href: "#contact" }
+    { name: "About", href: "/#about" },
+    { name: "Skills", href: "/#skills" },
+    { name: "Projects", href: "/#projects" },
+    { name: "Contact", href: "/#contact" }
   ];
 
   const scrollToTop = () => {
@@ -72,14 +73,8 @@ function Footer() {
               Transforming ideas into elegant, functional solutions.
             </p>
             <div className="flex items-center gap-2 text-sm">
-              <span>Made with</span>
-              <motion.div
-                animate={{ scale: [1, 1.2, 1] }}
-                transition={{ duration: 1, repeat: Infinity }}
-              >
-                <Heart className="w-4 h-4 text-orange-600 fill-orange-600" />
-              </motion.div>
-              <span>by Christian C. Angcaya</span>
+
+              <span>Made by Christian C. Angcaya</span>
             </div>
           </motion.div>
 
@@ -94,14 +89,17 @@ function Footer() {
             <h4 className="text-white font-semibold mb-4">Quick Links</h4>
             <nav className="flex flex-col space-y-2">
               {quickLinks.map((link, index) => (
-                <motion.a
+                <motion.div
                   key={index}
-                  href={link.href}
                   whileHover={{ x: 5 }}
-                  className="text-gray-400 hover:text-orange-600 transition-colors text-sm"
                 >
-                  {link.name}
-                </motion.a>
+                  <Link
+                    to={link.href}
+                    className="text-gray-400 hover:text-orange-600 transition-colors text-sm"
+                  >
+                    {link.name}
+                  </Link>
+                </motion.div>
               ))}
             </nav>
           </motion.div>

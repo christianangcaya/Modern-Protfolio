@@ -1,32 +1,7 @@
 import { motion } from "framer-motion";
-import { Code2, Palette, Rocket, Users } from "lucide-react";
+import { Code2 } from "lucide-react";
 
 function About() {
-  const skills = [
-    {
-      icon: <Code2 className="w-8 h-8" />,
-      title: "Clean Code",
-      description:
-        "Writing maintainable, scalable code following best practices",
-    },
-    {
-      icon: <Palette className="w-8 h-8" />,
-      title: "Modern Design",
-      description: "Creating beautiful interfaces with attention to detail",
-    },
-    {
-      icon: <Rocket className="w-8 h-8" />,
-      title: "Performance",
-      description: "Building fast, optimized applications for the best UX",
-    },
-    {
-      icon: <Users className="w-8 h-8" />,
-      title: "Collaboration",
-      description:
-        "Working effectively with teams to deliver exceptional results",
-    },
-  ];
-
   const containerVariants = {
     hidden: { opacity: 0 },
     visible: {
@@ -155,100 +130,40 @@ function About() {
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
           >
-            <p className="text-gray-300 text-lg md:text-xl leading-relaxed mb-6">
+            <p className="text-gray-300 text-base md:text-xl leading-relaxed mb-6">
               Hi! I'm{" "}
               <span className="text-orange-600 font-bold">
                 Christian C. Angcaya
               </span>
-              , a passionate{" "}
+              , an{" "}
               <span className="font-semibold">
-                Full-Stack Web & IoT Developer
+                Information Technology student
               </span>{" "}
-              who loves building modern, responsive, and interactive web
-              experiences.
+              with a strong interest in{" "}
+              <span className="font-semibold">
+                Full-Stack Web & IoT Development
+              </span>{" "}
+              who enjoys building modern, responsive, and interactive web
+              applications.
             </p>
             <p className="text-gray-400 text-sm md:text-base leading-relaxed mb-2">
-              I specialize in creating websites using technologies like{" "}
+              I build modern and responsive web applications using{" "}
               <span className="font-semibold">
-                React, TypeScript, and TailwindCSS
+                React, TypeScript, Tailwind CSS, and Framer Motion
               </span>
-              . I also develop{" "}
+              , develop backend systems with{" "}
               <span className="font-semibold">
-                web applications integrated with IoT systems
+                Node.js, Express, and MongoDB
               </span>
-              , connecting hardware like{" "}
-              <span className="font-semibold">Arduino and ESP32</span> to
-              deliver smart, real-world solutions. My goal is to craft digital
-              experiences that are visually stunning, highly functional, and
-              bridge the gap between hardware and software.
+              , and implement real-time features through{" "}
+              <span className="font-semibold">WebSockets</span>. I also work
+              with <span className="font-semibold">ESP32 and Arduino</span> to
+              integrate IoT devices with web platforms, creating user-friendly
+              and efficient solutions while continuously improving my skills
+              through hands-on projects and learning new technologies.
             </p>
           </motion.div>
         </div>
-
-        {/* Skills Grid */}
-        <motion.div
-          variants={containerVariants}
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true }}
-          className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6"
-        >
-          {skills.map((skill, index) => (
-            <motion.div
-              key={index}
-              variants={itemVariants}
-              whileHover={{
-                scale: 1.05,
-                boxShadow: "0 20px 40px rgba(234, 88, 12, 0.3)",
-              }}
-              className="bg-gradient-to-br from-gray-800 to-gray-900 p-6 rounded-xl border border-gray-800 hover:border-orange-600/50 transition-all duration-300"
-            >
-              <motion.div
-                className="text-orange-600 mb-4"
-                whileHover={{ rotate: [0, -10, 10, -10, 0] }}
-                transition={{ duration: 0.5 }}
-              >
-                {skill.icon}
-              </motion.div>
-              <h3 className="text-white font-bold text-xl mb-2">
-                {skill.title}
-              </h3>
-              <p className="text-gray-400 text-sm">{skill.description}</p>
-            </motion.div>
-          ))}
-        </motion.div>
-
-        {/* Stats Section */}
-        {/* <motion.div
-          className="mt-16 grid grid-cols-3 gap-8 max-w-3xl mx-auto"
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.8, delay: 0.3 }}
-        >
-          {[
-            { number: "50+", label: "Projects Completed" },
-            { number: "3+", label: "Years Experience" },
-            { number: "100%", label: "Client Satisfaction" }
-          ].map((stat, index) => (
-            <motion.div
-              key={index}
-              className="text-center"
-              whileHover={{ scale: 1.1 }}
-            >
-              <motion.div
-                className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-orange-500 to-red-600 bg-clip-text text-transparent mb-2"
-                initial={{ opacity: 0, scale: 0 }}
-                whileInView={{ opacity: 1, scale: 1 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.5, delay: 0.5 + index * 0.1 }}
-              >
-                {stat.number}
-              </motion.div>
-              <div className="text-gray-400 text-sm md:text-base">{stat.label}</div>
-            </motion.div>
-          ))}
-        </motion.div> */}
       </div>
     </section>
   );

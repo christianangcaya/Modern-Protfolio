@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import { Link, useLocation } from "react-router-dom";
 import { Code2 } from "lucide-react";
@@ -7,21 +7,30 @@ function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
   const location = useLocation();
 
-  const handleNavClick = (sectionId: string) => {
+  useEffect(() => {
     setIsOpen(false);
-    // If we're not on the home page, navigate to home first
-    if (location.pathname !== "/") {
-      // This will be handled by the link
+    
+    // Check if there's a hash in the URL
+    const hash = location.hash.slice(1);
+    
+    if (hash) {
+      // Wait a bit for the page to render, then scroll to the element
+      setTimeout(() => {
+        const element = document.getElementById(hash);
+        if (element) {
+          element.scrollIntoView({ behavior: "smooth" });
+        }
+      }, 100);
     } else {
-      // Scroll to section if already on home page
-      const element = document.getElementById(sectionId);
-      element?.scrollIntoView({ behavior: "smooth" });
+      // If no hash, scroll to top
+      window.scrollTo(0, 0);
     }
-  };
+  }, [location]);
 
   const navLinks = [
     { label: "Home", href: "/", id: "home" },
     { label: "About", href: "/#about", id: "about" },
+    { label: "Skills", href: "/#skills", id: "skills" },
     { label: "Projects", href: "/#projects", id: "projects" },
     { label: "Tech Stack", href: "/#techstack", id: "techstack" },
     { label: "Contact", href: "/#contact", id: "contact" },
@@ -44,7 +53,6 @@ function Navbar() {
           <Link
             key={link.id}
             to={link.href}
-            onClick={() => handleNavClick(link.id)}
             className="hover:text-orange-500 transition"
           >
             {link.label}
@@ -70,7 +78,6 @@ function Navbar() {
             <Link
               key={link.id}
               to={link.href}
-              onClick={() => handleNavClick(link.id)}
               className="hover:text-orange-500 transition text-white"
             >
               {link.label}

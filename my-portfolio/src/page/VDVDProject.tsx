@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import { useEffect } from "react";
+import { Link } from "react-router-dom";
 import {
   Monitor,
   Code,
@@ -10,6 +11,8 @@ import {
   Palette,
   Database,
   CheckCircle2,
+  ArrowLeft,
+  ArrowRight,
 } from "lucide-react";
 import VDVD from "../assets/VDDB.png";
 import VDM from "../assets/VDM.png";
@@ -561,13 +564,16 @@ function VDVDProject() {
             ></motion.div>
           </motion.div>
 
-          <motion.button
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.95 }}
-            className="px-8 py-4 bg-gradient-to-r from-orange-600 to-red-600 text-white font-bold rounded-full hover:shadow-lg hover:shadow-orange-600/50 transition-all"
-          >
-            View Live Project
-          </motion.button>
+          {/* Navigation Buttons */}
+          <div className="flex flex-col md:flex-row gap-4 justify-center items-center mt-8">
+            <Link 
+              to="/project/lgu-scholar"
+              className="px-8 py-4 bg-gradient-to-r from-orange-600 to-red-700 text-white font-bold rounded-full hover:shadow-lg hover:shadow-orange-600/50 transition-all flex items-center gap-2"
+            >
+              <ArrowLeft className="w-5 h-5" />
+              Previous Project
+            </Link>
+          </div>
         </div>
       </section>
     </div>

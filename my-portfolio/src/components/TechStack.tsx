@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { FaReact, FaNodeJs, FaHtml5, FaCss3Alt, FaJsSquare, FaGitAlt} from "react-icons/fa";
-import { SiArduino } from "react-icons/si";
+import { SiArduino, SiExpress, SiMongodb, SiMongoose, SiMysql } from "react-icons/si";
 import { SiTypescript, SiTailwindcss } from "react-icons/si";
 
 const techs = [
@@ -8,6 +8,10 @@ const techs = [
   { icon: <SiTypescript size={50} className="text-blue-400" />, name: "TypeScript" },
   { icon: <SiTailwindcss size={50} className="text-sky-400" />, name: "TailwindCSS" },
   { icon: <FaNodeJs size={50} className="text-green-500" />, name: "Node.js" },
+  { icon: <SiExpress size={50} className="text-gray-300" />, name: "Express" },
+  { icon: <SiMongodb size={50} className="text-green-600" />, name: "MongoDB" },
+  { icon: <SiMongoose size={50} className="text-red-600" />, name: "Mongoose" },
+  { icon: <SiMysql size={50} className="text-blue-600" />, name: "MySQL" },
   { icon: <FaHtml5 size={50} className="text-orange-500" />, name: "HTML5" },
   { icon: <FaCss3Alt size={50} className="text-blue-500" />, name: "CSS3" },
   { icon: <FaJsSquare size={50} className="text-yellow-400" />, name: "JavaScript" },
