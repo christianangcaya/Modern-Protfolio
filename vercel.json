@@ -1,9 +1,11 @@
 {
   "buildCommand": "cd my-portfolio && npm run build",
   "outputDirectory": "my-portfolio/dist",
-  "routes": [
+  "cleanUrls": true,
+  "trailingSlash": false,
+  "rewrites": [
     {
-      "src": "/(.*)",
+      "source": "/(.*)",
       "destination": "/index.html"
     }
   ]
