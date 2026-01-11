@@ -33,7 +33,7 @@ function Hero() {
           </h1>
 
           <h2 className="mt-2 sm:mt-3 text-lg sm:text-2xl md:text-3xl text-gray-300 font-light">
-            Full Stack Web & IoT Developer
+            Full Stack Developer
           </h2>
 
           <p className="mt-3 sm:mt-4 text-gray-300 text-sm sm:text-base md:text-lg max-w-xl mx-auto md:mx-0 leading-relaxed">

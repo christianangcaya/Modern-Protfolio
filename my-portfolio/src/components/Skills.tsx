@@ -13,7 +13,7 @@ function Skills() {
       icon: <Rocket className="w-8 h-8" />,
       title: "Backend Development",
       description:
-        "Developing RESTful APIs using Node.js, Express.js, MongoDB, and Mongoose, including real-time features with WebSockets and authentication using JWT and Google OAuth",
+        "Developing RESTful APIs using Node.js, Express.js, MongoDB, and Mongoose, including real-time features with WebSockets and authentication using JWT",
     },
     {
       icon: <Cpu className="w-8 h-8" />,
@@ -25,7 +25,7 @@ function Skills() {
       icon: <Palette className="w-8 h-8" />,
       title: "Tools & Platforms",
       description:
-        "Experience using Git and GitHub for version control, Vite and Nodemon for development, Postman for API testing, VS Code for coding, and deploying using Render",
+        "Experience using Git and GitHub for version control, Vite and Nodemon for development, Postman for API testing, VS Code for coding, and deploying using Vercel",
     },
   ];
 
