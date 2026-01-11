@@ -42,7 +42,7 @@ function Hero() {
             OJT. Proficient in building responsive user
             interfaces, implementing backend logic, and creating real-time
             features. Strong problem-solving skills and passionate about
-            learning modern technologies to deliver practical solutions.
+            learning modern technologies to deliver practical solutions
           </p>
 
           {/* Buttons */}
