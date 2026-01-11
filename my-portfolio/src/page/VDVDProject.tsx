@@ -12,7 +12,6 @@ import {
   Database,
   CheckCircle2,
   ArrowLeft,
-  ArrowRight,
 } from "lucide-react";
 import VDVD from "../assets/VDDB.png";
 import VDM from "../assets/VDM.png";
