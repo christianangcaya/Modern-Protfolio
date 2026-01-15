@@ -30,12 +30,22 @@ Thank you for your time and consideration. I look forward to your response.
 Best regards,
 ${name}`;
 
-    // Use mailto: for better mobile compatibility
-    const mailtoURL = `mailto:angcayachristian2004@gmail.com?subject=${encodeURIComponent(
-      subject
-    )}&body=${encodeURIComponent(body)}`;
+    // Detect if mobile device
+    const isMobile = /iPhone|iPad|iPod|Android|webOS|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
 
-    window.location.href = mailtoURL;
+    if (isMobile) {
+      // Use mailto for mobile
+      const mailtoURL = `mailto:angcayachristian2004@gmail.com?subject=${encodeURIComponent(
+        subject
+      )}&body=${encodeURIComponent(body)}`;
+      window.location.href = mailtoURL;
+    } else {
+      // Use Gmail web interface for desktop
+      const gmailURL = `https://mail.google.com/mail/?view=cm&to=angcayachristian2004@gmail.com&su=${encodeURIComponent(
+        subject
+      )}&body=${encodeURIComponent(body)}`;
+      window.open(gmailURL, "_blank");
+    }
 
     // Optional: clear form after sending
     setTimeout(() => {
