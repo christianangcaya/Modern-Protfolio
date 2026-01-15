@@ -12,8 +12,7 @@ function Contact() {
 
     const subject = "Inquiry via Portfolio Website";
 
-    const body = `
-Good day,
+    const body = `Good day,
 
 I hope this message finds you well.
 
@@ -29,19 +28,21 @@ ${message}
 Thank you for your time and consideration. I look forward to your response.
 
 Best regards,
-${name}
-    `;
+${name}`;
 
-    const gmailURL = `https://mail.google.com/mail/?view=cm&to=angcayachristian2004@gmail.com&su=${encodeURIComponent(
+    // Use mailto: for better mobile compatibility
+    const mailtoURL = `mailto:angcayachristian2004@gmail.com?subject=${encodeURIComponent(
       subject
     )}&body=${encodeURIComponent(body)}`;
 
-    window.open(gmailURL, "_blank");
+    window.location.href = mailtoURL;
 
-    // Optional: clear form after opening draft
-    setName("");
-    setEmail("");
-    setMessage("");
+    // Optional: clear form after sending
+    setTimeout(() => {
+      setName("");
+      setEmail("");
+      setMessage("");
+    }, 100);
   };
 
   return (
