@@ -55,7 +55,7 @@ function Hero() {
             </a>
 
             <a
-              href="/CCA CV Resume (1).pdf"
+              href="/CCA_RESUME.pdf"
               download="Christian-Angcaya-CV.pdf"
               className="w-full sm:w-auto px-6 py-3 border border-orange-600 text-orange-600 hover:bg-orange-600 hover:text-white rounded-lg font-medium transition-all shadow-lg text-center"
             >
